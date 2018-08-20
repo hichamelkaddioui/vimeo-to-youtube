@@ -1,0 +1,47 @@
+{
+  "name": "vimeo-to-youtube",
+  "version": "0.1.0",
+  "description": "A Node.js app to easily transfer your videos from Vimeo to YouTube",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hichamelkaddioui/vimeo-to-youtube.git"
+  },
+  "keywords": [
+    "vimeo",
+    "youtube",
+    "transfer"
+  ],
+  "author": "Hicham El Kaddioui",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/hichamelkaddioui/vimeo-to-youtube/issues"
+  },
+  "homepage": "https://github.com/hichamelkaddioui/vimeo-to-youtube#readme",
+  "devDependencies": {
+    "@metahub/cz-conventional-commit": "^3.0.1",
+    "commitizen": "^2.10.1",
+    "eslint": "^5.4.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "standard": "^11.0.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/@metahub/cz-conventional-commit"
+    }
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "dotenv": "^6.0.0",
+    "ora": "^3.0.0",
+    "vimeo": "^2.1.0",
+    "winston": "^3.0.0"
+  }
+}
