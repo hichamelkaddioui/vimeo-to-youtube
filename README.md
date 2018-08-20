@@ -37,3 +37,4 @@ Key | Type | Description | Default
 `VIMEO_ACCESS_TOKEN` | `String` | A generated Access Token |
 `VIMEO_VIDEOS_PER_PAGE` | `Number` | The number of videos to fetch per request. [More info here](https://developer.vimeo.com/api/common-formats#pagination) | `100`
 `VIMEO_VIDEOS_FIELDS` | `String` | The fields of the video object to filter from the Vimeo API. [More info here](https://developer.vimeo.com/api/common-formats#json-filter) | `'resource_key,name,description,tags,files,download,privacy,categories'`
+`DB_FILENAME` | `String` | The path of the local database file | `'db/videos.db'`
