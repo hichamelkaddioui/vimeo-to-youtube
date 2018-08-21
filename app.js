@@ -24,13 +24,10 @@ const start = () =>
       logger.debug('Question answered', answer)
 
       switch (answer.action) {
-        case CHOICE_DOWNLOAD:
-          return util.fetchVideosIfDatabaseIsEmpty().then(() => dl())
-        case CHOICE_PRINT_LIST:
-          return util.fetchVideosIfDatabaseIsEmpty().then(videos => util.printVideosList(videos)).then(() => start())
-        case CHOICE_UPLOAD:
+        case CHOICE_DOWNLOAD: return util.fetchVideosIfDatabaseIsEmpty().then(() => dl())
+        case CHOICE_UPLOAD: return ul()
         default:
-          return ul()
+        case CHOICE_PRINT_LIST: return util.fetchVideosIfDatabaseIsEmpty().then(videos => util.printVideosList(videos)).then(() => start())
       }
     })
 
