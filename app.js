@@ -7,7 +7,7 @@ const dl = require('./lib/download')
 const ul = require('./lib/upload')
 const util = require('./lib/util')
 
-logger.info('Starting app')
+logger.info('App started')
 
 const CHOICE_PRINT_LIST = '🖨 Print the list of videos'
 const CHOICE_DOWNLOAD = '⏬ Download videos from Vimeo'
@@ -27,7 +27,7 @@ const start = () =>
         case CHOICE_DOWNLOAD:
           return util.fetchVideosIfDatabaseIsEmpty().then(() => dl())
         case CHOICE_PRINT_LIST:
-          break
+          return util.fetchVideosIfDatabaseIsEmpty().then(videos => util.printVideosList(videos)).then(() => start())
         case CHOICE_UPLOAD:
         default:
           return ul()
