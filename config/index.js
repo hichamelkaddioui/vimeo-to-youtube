@@ -4,10 +4,12 @@ const downloadConfig = require('./download')
 const loggerConfig = require('./logger')
 const nedbConfig = require('./nedb')
 const vimeoConfig = require('./vimeo')
+const youtubeConfig = require('./youtube')
 
 module.exports = {
   downloadConfig,
   loggerConfig,
   nedbConfig,
-  vimeoConfig
+  vimeoConfig,
+  youtubeConfig
 }
