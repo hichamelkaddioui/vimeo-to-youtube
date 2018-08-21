@@ -4,6 +4,7 @@ const inquirer = require('inquirer')
 
 const logger = require('./lib/logger')
 const dl = require('./lib/download')
+const ul = require('./lib/upload')
 const util = require('./lib/util')
 
 logger.info('Starting app')
@@ -29,6 +30,7 @@ const start = () =>
           break
         case CHOICE_UPLOAD:
         default:
+          return ul()
       }
     })
 
