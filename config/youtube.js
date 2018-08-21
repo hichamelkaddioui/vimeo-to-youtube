@@ -22,6 +22,6 @@ module.exports = {
     authProviderX509CertUrl: process.env.YOUTUBE_AUTH_PROVIDER_X509_CERT_URL || 'https://www.googleapis.com/oauth2/v1/certs'
   },
   tokenPath: typeof process.env.YOUTUBE_TOKEN_PATH === 'string' && process.env.YOUTUBE_TOKEN_PATH
-    ? path.join(__dirname, process.env.YOUTUBE_TOKEN_PATH)
+    ? path.resolve(__dirname, process.env.YOUTUBE_TOKEN_PATH)
     : path.resolve(getConfigHome(), 'vimeo-to-youtube', 'youtube-oauth2-credentials.json')
 }
