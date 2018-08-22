@@ -2,8 +2,8 @@ const path = require('path')
 const { getDataHome } = require('platform-folders')
 
 module.exports = {
-  dataPath: typeof process.env.DATA_PATH === 'string' && process.env.DATA_PATH
-    ? path.resolve(__dirname, process.env.DATA_PATH)
-    : path.resolve(getDataHome(), 'vimeo-to-youtube'),
-  concurrency: process.env.WORKER_PARALLEL_DOWNLOADS || 3
+  limit: process.env.DOWNLOAD_PARALLEL_VIDEOS || 3,
+  dest: typeof process.env.DOWNLOAD_DEST_FOLDER === 'string' && process.env.DOWNLOAD_DEST_FOLDER
+    ? path.resolve(__dirname, process.env.DOWNLOAD_DEST_FOLDER)
+    : path.resolve(getDataHome(), 'vimeo-to-youtube')
 }

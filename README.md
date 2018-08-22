@@ -47,6 +47,6 @@ Key | Type | Description | Default
 `YOUTUBE_REDIRECT_URIS` | `String` | OAuth2 redirect URIs | `'urn:ietf:wg:oauth:2.0:oob,http://localhost'`
 `YOUTUBE_TOKEN_PATH` | `String` | The path of the file in which to store the access token | `'youtube-oauth2-credentials.json'` in the user's app config folder, retrieved with [platform-folders](https://www.npmjs.com/package/platform-folders) 
 `DB_FILENAME` | `String` | The path of the local database file | `'db/videos.db'`
-`DATA_PATH` | `String` | The path of the folder into which store the downloaded videos | The user's app data folder, retrieved with [platform-folders](https://www.npmjs.com/package/platform-folders) 
-`WORKER_PARALLEL_DOWNLOADS` | `Number` | The number of parallel downloads to launch | `3`
+`DOWNLOAD_DEST` | `String` | The path of the folder into which store the downloaded videos | The user's app data folder, retrieved with [platform-folders](https://www.npmjs.com/package/platform-folders) 
+`DOWNLOAD_PARALLEL_VIDEOS` | `Number` | The number of videos to download in parallel | `3`
 `WORKER_PARALLEL_UPLOADS` | `Number` | The number of parallel uploads to launch | `3`
