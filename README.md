@@ -49,4 +49,4 @@ Key | Type | Description | Default
 `DB_FILENAME` | `String` | The path of the local database file | `'db/videos.db'`
 `DOWNLOAD_DEST` | `String` | The path of the folder into which store the downloaded videos | The user's app data folder, retrieved with [platform-folders](https://www.npmjs.com/package/platform-folders) 
 `DOWNLOAD_PARALLEL_VIDEOS` | `Number` | The number of videos to download in parallel | `3`
-`WORKER_PARALLEL_UPLOADS` | `Number` | The number of parallel uploads to launch | `3`
+`UPLOAD_PARALLEL_VIDEOS` | `Number` | The number of videos to upload in parallel | `3`

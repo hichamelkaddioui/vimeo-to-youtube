@@ -1,3 +1,3 @@
 module.exports = {
-  concurrency: process.env.WORKER_PARALLEL_UPLOADS || 3
+  limit: process.env.UPLOAD_PARALLEL_VIDEOS || 3
 }
