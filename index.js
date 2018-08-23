@@ -1,5 +1,5 @@
 'use strict'
 
-const app = require('./app')
+const app = require('./lib/app')
 
 app.start()
