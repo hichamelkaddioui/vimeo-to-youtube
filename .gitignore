@@ -1,7 +1,3 @@
-# Local database files
-db/*
-!db/.gitignore
-
 # Logs
 logs
 *.log

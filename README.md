@@ -31,6 +31,8 @@ npm start
 
 ## Environment variables
 
+Data folder (`$DATA_FOLDER`) and config folder (`$CONFIG_FOLDER`) are resolved with [platform-folders](https://www.npmjs.com/package/platform-folders).
+
 Key | Type | Description | Default
 --|--|--|--
 `VIMEO_CLIENT_ID` | `String` | The Client ID of your Vimeo application |
@@ -45,8 +47,8 @@ Key | Type | Description | Default
 `YOUTUBE_AUTH_PROVIDER_X509_CERT_URL` | `String` | OAuth2 certs URL | `'https://www.googleapis.com/oauth2/v1/certs'`
 `YOUTUBE_CLIENT_SECRET` | `String` | The Client Secret of your YouTube application |
 `YOUTUBE_REDIRECT_URIS` | `String` | OAuth2 redirect URIs | `'urn:ietf:wg:oauth:2.0:oob,http://localhost'`
-`YOUTUBE_TOKEN_PATH` | `String` | The path of the file in which to store the access token | `'youtube-oauth2-credentials.json'` in the user's app config folder, retrieved with [platform-folders](https://www.npmjs.com/package/platform-folders) 
-`DB_FILENAME` | `String` | The path of the local database file | `'db/videos.db'`
-`DOWNLOAD_DEST` | `String` | The path of the folder into which store the downloaded videos | The user's app data folder, retrieved with [platform-folders](https://www.npmjs.com/package/platform-folders) 
+`YOUTUBE_TOKEN_PATH` | `String` | The path of the file in which to store the access token | `'$CONFIG_FOLDER/vimeo-to-youtube/youtube-oauth2-credentials.json'`
+`DB_FILENAME` | `String` | The path of the local database file | `'$DATA_FOLDER/vimeo-to-youtube/db/videos.db'`
+`DOWNLOAD_DEST` | `String` | The path of the folder into which store the downloaded video files | `'$DATA_FOLDER/vimeo-to-youtube/files'`
 `DOWNLOAD_PARALLEL_VIDEOS` | `Number` | The number of videos to download in parallel | `3`
 `UPLOAD_PARALLEL_VIDEOS` | `Number` | The number of videos to upload in parallel | `3`
