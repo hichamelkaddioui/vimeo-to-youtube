@@ -1,6 +1,6 @@
 {
   "name": "vimeo-to-youtube",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "description": "A Node.js app to easily transfer your videos from Vimeo to YouTube",
   "main": "index.js",
   "scripts": {
