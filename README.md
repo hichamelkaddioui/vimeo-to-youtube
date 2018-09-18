@@ -4,7 +4,17 @@
 
 # Vimeo to YouTube
 
-> A Node.js app to easily transfer your videos from Vimeo to YouTube
+> A Node.js CLI to easily transfer your videos from Vimeo to YouTube
+
+Download all your videos from Vimeo with the push of a button, and upload them to YouTube with all their metadata.
+
+![cli-demo](https://raw.githubusercontent.com/hichamelkaddioui/vimeo-to-youtube/master/assets/demo.gif)
+
+## Features
+
+- Highly customizable
+- Download and upload videos in parallel 
+- Keep metadata
 
 ## Requirements
 
