@@ -15,6 +15,7 @@ Download all your videos from Vimeo with the push of a button, and upload them t
 - Highly customizable
 - Download and upload videos in parallel 
 - Keep metadata
+- :star: **New:** transfer directly without any disk write
 
 ## Requirements
 
