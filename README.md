@@ -41,6 +41,11 @@ npm start
 
 ## Environment variables
 
+You can set these variables either by editing the `.env` file or by setting them before running the CLI. E.g.:
+```console
+LOGGER_LEVEL=debug npm start
+```
+
 Data folder (`$DATA_FOLDER`) and config folder (`$CONFIG_FOLDER`) are resolved with [platform-folders](https://www.npmjs.com/package/platform-folders).
 
 Key | Type | Description | Default
@@ -62,3 +67,4 @@ Key | Type | Description | Default
 `DOWNLOAD_DEST` | `String` | The path of the folder into which store the downloaded video files | `'$DATA_FOLDER/vimeo-to-youtube/files'`
 `DOWNLOAD_PARALLEL_VIDEOS` | `Number` | The number of videos to download in parallel | `3`
 `UPLOAD_PARALLEL_VIDEOS` | `Number` | The number of videos to upload in parallel | `3`
+`LOGGER_LEVEL` | `String` | The level of log to display | `'info'`

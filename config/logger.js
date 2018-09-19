@@ -2,7 +2,7 @@ const path = require('path')
 const winston = require('winston')
 
 module.exports = {
-  level: 'info',
+  level: process.env.LOGGER_LEVEL || 'info',
   format: winston.format.json(),
   transports: [
     new winston.transports.File({ filename: path.resolve(__dirname, '../error.log'), level: 'error' }),
