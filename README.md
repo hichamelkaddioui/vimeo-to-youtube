@@ -15,7 +15,7 @@ Download all your videos from Vimeo with the push of a button, and upload them t
 - Highly customizable
 - Download and upload videos in parallel 
 - Keep metadata
-- :star: **New:** transfer directly without any disk write
+- Transfer directly without any disk write
 
 ## Requirements
 
@@ -49,23 +49,35 @@ LOGGER_LEVEL=debug npm start
 
 Data folder (`$DATA_FOLDER`) and config folder (`$CONFIG_FOLDER`) are resolved with [platform-folders](https://www.npmjs.com/package/platform-folders).
 
+### Vimeo API
+
 Key | Type | Description | Default
 --|--|--|--
-`VIMEO_CLIENT_ID` | `String` | The Client ID of your Vimeo application |
-`VIMEO_CLIENT_SECRET` | `String` | The Client Secret of your Vimeo application |
-`VIMEO_ACCESS_TOKEN` | `String` | A generated Access Token |
+`VIMEO_CLIENT_ID` | `String` | The Client ID of your Vimeo application | _Required_
+`VIMEO_CLIENT_SECRET` | `String` | The Client Secret of your Vimeo application | _Required_
+`VIMEO_ACCESS_TOKEN` | `String` | A generated Access Token | _Required_
 `VIMEO_VIDEOS_PER_PAGE` | `Number` | The number of videos to fetch per request. [More info here](https://developer.vimeo.com/api/common-formats#pagination) | `100`
 `VIMEO_VIDEOS_FIELDS` | `String` | The fields of the video object to filter from the Vimeo API. [More info here](https://developer.vimeo.com/api/common-formats#json-filter) | `'resource_key,name,description,tags,files,download,privacy,categories'`
-`YOUTUBE_CLIENT_ID` | `String` | The Client ID of your YouTube application |
-`YOUTUBE_PROJECT_ID` | `String` | The Project ID of your YouTube application |
+
+### YouTube API
+
+Key | Type | Description | Default
+--|--|--|--
+`YOUTUBE_CLIENT_ID` | `String` | The Client ID of your YouTube application | _Required_
+`YOUTUBE_PROJECT_ID` | `String` | The Project ID of your YouTube application | _Required_
 `YOUTUBE_AUTH_URI` | `String` | OAuth2 auth URI | `'https://accounts.google.com/o/oauth2/auth'`
 `YOUTUBE_TOKEN_URI` | `String` | OAuth2 token URI | `'https://www.googleapis.com/oauth2/v3/token'`
 `YOUTUBE_AUTH_PROVIDER_X509_CERT_URL` | `String` | OAuth2 certs URL | `'https://www.googleapis.com/oauth2/v1/certs'`
-`YOUTUBE_CLIENT_SECRET` | `String` | The Client Secret of your YouTube application |
+`YOUTUBE_CLIENT_SECRET` | `String` | The Client Secret of your YouTube application | _Required_
 `YOUTUBE_REDIRECT_URIS` | `String` | OAuth2 redirect URIs | `'urn:ietf:wg:oauth:2.0:oob,http://localhost'`
 `YOUTUBE_TOKEN_PATH` | `String` | The path of the file in which to store the access token | `'$CONFIG_FOLDER/vimeo-to-youtube/youtube-oauth2-credentials.json'`
+
+### Config
+
+Key | Type | Description | Default
+--|--|--|--
 `DB_FILENAME` | `String` | The path of the local database file | `'$DATA_FOLDER/vimeo-to-youtube/db/videos.db'`
 `DOWNLOAD_DEST` | `String` | The path of the folder into which store the downloaded video files | `'$DATA_FOLDER/vimeo-to-youtube/files'`
 `DOWNLOAD_PARALLEL_VIDEOS` | `Number` | The number of videos to download in parallel | `3`
-`UPLOAD_PARALLEL_VIDEOS` | `Number` | The number of videos to upload in parallel | `3`
+`UPLOAD_PARALLEL_VIDEOS` | `Number` | The number of videos to upload in parallel | `10`
 `LOGGER_LEVEL` | `String` | The level of log to display | `'info'`
