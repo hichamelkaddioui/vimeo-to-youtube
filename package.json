@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/hichamelkaddioui/vimeo-to-youtube#readme",
   "devDependencies": {
-    "@metahub/cz-conventional-commit": "^3.0.2",
-    "commitizen": "^4.0.3",
+    "@metahub/cz-conventional-commit": "^5.0.0",
+    "commitizen": "^4.3.0",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.18.2",
